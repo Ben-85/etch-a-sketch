@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="#">
+    <link rel="stylesheet" href="style.css">
+    <title>Etch-A-Sketch | The Odin Project</title>
+</head>
+<body>
+    <div class="container">    
+        <div class="sidebar">
+            <div class = sidebarTitle>Etch-A-Sketch</div>
+            <div class="colorPickerContainer">
+                <label for="colorpicker" id="colorPickerLabel">Color Picker:</label>
+                <input type="color" id="colorpicker" value="#000000">
+            </div>
+            <div class="slideContainer">
+                <div class="sliderHeading">Grid Size</div>
+                <input type="range" min="2" max="64" value="32" class="sliderGridSize" id="gridWidth" oninput="sliderValue();" />
+                <div id="slideWidthValue">32 x 32</div>
+            </div>
+            <div class="rgbToggleContainer">
+                <label for="rgbToggle" id="rgbToggleLabel">RGB Mode:</label>
+                <input type="checkbox" id="rgbToggle">
+            </div>
+            <button onclick="clearGrid();" class="sidebarButton" id="clear">Reset Etch-A-Sketch</button>
+        </div>
+        <div class = "gridContainer" id="gridContainer">
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
